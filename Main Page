@@ -1,0 +1,19 @@
+extends Node2D
+
+extends AnimatedSprite
+
+extends RichTextLabel
+
+func _ready():
+
+  set_fixed_proccess(delta)
+	
+	self.add_text("NEW GAME")
+	
+	self.add_text("PRESS ENTER TO START")
+	
+func _fixed_proccess(delta):
+
+	if is_action_pressed("UI_ENTER"):
+	
+		node.inherit("menu")
